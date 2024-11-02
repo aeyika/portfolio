@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="https://static-00.iconduck.com/assets.00/waving-hand-sign-emoji-2048x2048-r71rstzv.png">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -20,6 +19,7 @@
         },
       },
     };
+    
   </script>
   <style>
     @tailwind base;
@@ -133,25 +133,25 @@
   }
   </style>
 </head>
-<body class="bg-primary p-4">
+<body class="p-4 bg-primary">
     <nav>
-        <div class="max-w- mx-auto px-4">
+        <div class="px-4 mx-auto max-w-">
             <div class="flex items-center justify-between h-16">
                 <!-- Left-aligned-->
                 <div class="flex items-center">
-                    <a href="#home" class="text-secondary font-bold hover:underline" style="font-size: 2rem;">aeyika</a>
+                    <a href="#home" class="font-bold text-secondary hover:underline" style="font-size: 2rem;">aeyika</a>
                 </div>
                 <!-- Right-aligned-->
                 <div id="navbar" class="flex items-center space-x-4">
-                    <a href="#about" class="text-secondary text-lg hover:text-gray-800 hover:underline">ABOUT</a>
-                    <a href="#process" class="text-secondary text-lg hover:text-gray-800 hover:underline">PROCESS</a>
-                    <a href="#faq" class="text-secondary text-lg hover:text-gray-800 hover:underline">FAQ</a>
-                    <a href="#contact" class="text-secondary text-lg hover:text-gray-800 hover:underline">CONTACT</a>
+                    <a href="#about" class="text-lg text-secondary hover:text-gray-800 hover:underline">ABOUT</a>
+                    <a href="#process" class="text-lg text-secondary hover:text-gray-800 hover:underline">PROCESS</a>
+                    <a href="#faq" class="text-lg text-secondary hover:text-gray-800 hover:underline">FAQ</a>
+                    <a href="#contact" class="text-lg text-secondary hover:text-gray-800 hover:underline">CONTACT</a>
                 </div>
             </div>
         </div>
     </nav>
-    <section class="p-72 text-secondary flex flex-col" id="home">
+    <section class="flex flex-col lg:p-72 text-secondary sm:pl-4 sm:pt-52" id="home">
         <h1 class="text-4xl font-bold">Hey, I'm aeyika!</h1> 
         <p class="pt-4">I am a full-stack web developer, passionate on transforming creative ideas
             into visually stunning and user-friendly digital experiences. </p>
@@ -167,28 +167,28 @@
             not only look great but also provide seamless interactions for users.
         </p>
     </section>
-    <section class="pt-72 pl-72 text-secondary" id="about">
+    <section class="lg:pt-72 lg:pl-72 text-secondary sm:pl-4 sm:pt-52" id="about">
       <p class="font-inter">// about me</p>
-      <h1 class="text-secondary text-4xl font-bold">About Me</h1>
+      <h1 class="text-4xl font-bold text-secondary">About Me</h1>
       <p class="pt-4">I am a passionate coder with a love for full-stack development.</p>
       <p class="pt-8">I enjoy the process of building web applications that blend aesthetics with seamless functionality.</p>
       <p class="pt-8">I am skilled in: <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" class="text-tertiary hover:underline">HTML</a>, <a href="https://tailwindcss.com/" target="_blank" class="text-tertiary hover:underline">Tailwind CSS</a>,<a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" class="text-tertiary hover:underline"> JavaScript</a>, and <a href="https://www.figma.com/design/" target="_blank" class="text-tertiary hover:underline">Figma</a>.</p>
     </section>
-    <section class="pt-72 pl-72 flex flex-col text-secondary" id="process">
+    <section class="flex flex-col lg:pt-72 lg:pl-72 text-secondary sm:pl-4 sm:pt-52" id="process">
       <p class="font-inter">// process</p>
-      <h1 class="bg-primary text-4xl font-bold mb-7">Process</h1>
+      <h1 class="text-4xl font-bold bg-primary mb-7">Process</h1>
   
       <div class="p-4">
-          <ol class="relative border-l border-secondary">
+          <ol class="relative border-l border-secondary ">
               <li class="mb-10 ml-4">
                   <div class="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                  <time class="mb-1 font-normal leading-none text-secondary text-xl"><i class='bx bxl-figma'></i> Figma</time>
-                  <p class="mb-4 text-base font-normal text-secondary pt-4">Our Figma designs are meticulously crafted, blending creativity and precision to deliver visually stunning and user-friendly interfaces that elevate the user experience.</p>
+                  <time class="mb-1 text-xl font-normal leading-none text-secondary"><i class='bx bxl-figma'></i> Figma</time>
+                  <p class="pt-4 mb-4 text-base font-normal text-secondary">Our Figma designs are meticulously crafted, blending creativity and precision to deliver visually stunning and user-friendly interfaces that elevate the user experience.</p>
               </li>
               <li class="mb-10 ml-4">
                   <div class="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                  <time class="mb-1 font-normal leading-none text-xl text-secondary"><i class='bx bxl-visual-studio' ></i> Visual Studio Code</time>
-                  <p class="text-base font-normal text-secondary pt-4">We're highly skilled in Visual Studio Code, HTML, Tailwind CSS, and JavaScript, using these tools to build responsive, efficient, and visually engaging web applications. Our expertise enables us to streamline workflows, write clean, optimized code, and bring innovative designs to life with seamless functionality.</p>
+                  <time class="mb-1 text-xl font-normal leading-none text-secondary"><i class='bx bxl-visual-studio' ></i> Visual Studio Code</time>
+                  <p class="pt-4 text-base font-normal text-secondary">We're highly skilled in Visual Studio Code, HTML, Tailwind CSS, and JavaScript, using these tools to build responsive, efficient, and visually engaging web applications. Our expertise enables us to streamline workflows, write clean, optimized code, and bring innovative designs to life with seamless functionality.</p>
               </li>
               <li class="ml-4">
                   <div class="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -198,9 +198,9 @@
           </ol>
       </div>
   </section>
-  <div class="container pt-72 pl-72" id="faq">
+  <div class="container lg:pt-72 lg:pl-72 sm:pl-4 sm:pt-52" id="faq">
     <p>// faq</p>
-    <h1 class="text-4xl font-bold text-secondary pb-8">Frequently Asked Questions</h1>
+    <h1 class="pb-8 text-4xl font-bold text-secondary">Frequently Asked Questions</h1>
     <div class="accordion">
       <div class="accordion-item">
         <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Do you offer mobile support for your websites?</span><span class="icon" aria-hidden="true"></span></button>
@@ -235,25 +235,30 @@
       </div>
     </div>
   </div>
-  <section id="contact" class=" pt-72 pl-72 pb-72 ">
+  <section id="contact" class=" lg:pt-72 lg:pl-72 sm:pl-4 sm:pt-52">
     <p class="font-inter">// contact me</p>
     <h1 class="text-4xl font-bold">Contact Me</h1>
       <p class="pt-4">You can reach out to me via Discord or email for inquiries or collaboration. I look forward to discussing your project and exploring how we can work together.</p>
-      <div class="text-4xl pt-8 flex">
+      <div class="flex pt-8 text-4xl">
       <i class='bx bxl-discord-alt'></i>
-      <p class="pl-8 text-3xl">aeyika</p>
+      <p class="pl-8 text-3xl sm:text-2xl">aeyika</p>
     </div>
-    <div class="text-4xl pt-8 flex">
+    <div class="flex pt-8 text-4xl">
       <i class='bx bxs-envelope' ></i>
-      <p class="pl-8 text-3xl">davidjunbowan@gmail.com</p>
+      <p class="pl-8 text-3xl sm:text-2xl">davidjunbowan@gmail.com</p>
     </div>
   </section>
-  <footer class="bg-primary text-secondary py-4">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
-        <p class="transition duration-300 ease-in-out border-b border-transparent hover:border-secondary cursor-pointer">
-            Created by aeyika
+  <footer class="py-4 bg-primary text-secondary pt-72">
+    <div class="flex items-center justify-between px-4 mx-auto max-w-7xl">
+        <p class="transition duration-300 ease-in-out border-b border-transparent cursor-pointer hover:border-secondary">
+            created by aeyika
         </p>
-        <a href="#home" class="text-secondary hover:underline">Back to top</a>
+        <p class="transition duration-300 ease-in-out border-b border-transparent cursor-pointer hover:border-secondary">
+          <i class='bx bxl-tailwind-css'></i>
+          <i class='bx bxl-html5' ></i>
+          <i class='bx bxl-javascript' ></i>
+      </p>
+        <a href="#home" class="text-secondary hover:underline">back to top</a>
     </div>
 </footer>
   <script>
