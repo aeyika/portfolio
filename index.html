@@ -131,27 +131,41 @@
       margin: 2em 0;
     }
   }
+
   </style>
 </head>
 <body class="p-4 bg-primary">
-    <nav>
-        <div class="px-4 mx-auto max-w-">
-            <div class="flex items-center justify-between h-16">
-                <!-- Left-aligned-->
-                <div class="flex items-center">
-                    <a href="#home" class="font-bold text-secondary hover:underline" style="font-size: 2rem;">aeyika</a>
-                </div>
-                <!-- Right-aligned-->
-                <div id="navbar" class="flex items-center space-x-4">
-                    <a href="#about" class="text-lg text-secondary hover:text-gray-800 hover:underline">ABOUT</a>
-                    <a href="#process" class="text-lg text-secondary hover:text-gray-800 hover:underline">PROCESS</a>
-                    <a href="#faq" class="text-lg text-secondary hover:text-gray-800 hover:underline">FAQ</a>
-                    <a href="#contact" class="text-lg text-secondary hover:text-gray-800 hover:underline">CONTACT</a>
-                </div>
+  <nav class="relative">
+    <div class="px-4 mx-auto">
+        <div class="flex items-center justify-between h-16">
+            <!-- Left-aligned-->
+            <div class="flex items-center">
+                <a href="#home" class="font-bold text-secondary hover:underline" style="font-size: 2rem;">aeyika</a>
+            </div>
+            <!-- Right-aligned for desktop-->
+            <div id="navbar" class="items-center hidden space-x-4 md:flex">
+                <a href="#about" class="text-lg text-secondary hover:text-gray-800 hover:underline">ABOUT</a>
+                <a href="#process" class="text-lg text-secondary hover:text-gray-800 hover:underline">PROCESS</a>
+                <a href="#faq" class="text-lg text-secondary hover:text-gray-800 hover:underline">FAQ</a>
+                <a href="#contact" class="text-lg text-secondary hover:text-gray-800 hover:underline">CONTACT</a>
+            </div>
+            <!-- Hamburger Icon for mobile -->
+            <div class="md:hidden">
+                <button id="hamburger" class="text-secondary focus:outline-none">
+                    <i class='bx bx-menu' style="font-size: 2rem;"></i>
+                </button>
             </div>
         </div>
-    </nav>
-    <section class="flex flex-col lg:p-72 text-secondary sm:pl-4 sm:pt-52" id="home">
+    </div>
+    <!-- Dropdown for mobile -->
+    <div id="dropdown" class="absolute hidden w-full mt-2 rounded-lg shadow-lg bg-primary">
+        <a href="#about" class="block px-4 py-2 text-lg text-secondary hover:text-gray-800 hover:underline">ABOUT</a>
+        <a href="#process" class="block px-4 py-2 text-lg text-secondary hover:text-gray-800 hover:underline">PROCESS</a>
+        <a href="#faq" class="block px-4 py-2 text-lg text-secondary hover:text-gray-800 hover:underline">FAQ</a>
+        <a href="#contact" class="block px-4 py-2 text-lg text-secondary hover:text-gray-800 hover:underline">CONTACT</a>
+    </div>
+</nav>
+    <section class="flex flex-col pl-4 lg:p-72 text-secondary pt-52" id="home">
         <h1 class="text-4xl font-bold">Hey, I'm aeyika!</h1> 
         <p class="pt-4">I am a full-stack web developer, passionate on transforming creative ideas
             into visually stunning and user-friendly digital experiences. </p>
@@ -167,14 +181,14 @@
             not only look great but also provide seamless interactions for users.
         </p>
     </section>
-    <section class="lg:pt-72 lg:pl-72 text-secondary sm:pl-4 sm:pt-52" id="about">
+    <section class="pl-4 lg:pt-72 lg:pl-72 text-secondary pt-52" id="about">
       <p class="font-inter">// about me</p>
       <h1 class="text-4xl font-bold text-secondary">About Me</h1>
       <p class="pt-4">I am a passionate coder with a love for full-stack development.</p>
       <p class="pt-8">I enjoy the process of building web applications that blend aesthetics with seamless functionality.</p>
       <p class="pt-8">I am skilled in: <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" class="text-tertiary hover:underline">HTML</a>, <a href="https://tailwindcss.com/" target="_blank" class="text-tertiary hover:underline">Tailwind CSS</a>,<a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" class="text-tertiary hover:underline"> JavaScript</a>, and <a href="https://www.figma.com/design/" target="_blank" class="text-tertiary hover:underline">Figma</a>.</p>
     </section>
-    <section class="flex flex-col lg:pt-72 lg:pl-72 text-secondary sm:pl-4 sm:pt-52" id="process">
+    <section class="flex flex-col pl-4 lg:pt-72 lg:pl-72 text-secondary pt-52" id="process">
       <p class="font-inter">// process</p>
       <h1 class="text-4xl font-bold bg-primary mb-7">Process</h1>
   
@@ -198,7 +212,7 @@
           </ol>
       </div>
   </section>
-  <div class="container lg:pt-72 lg:pl-72 sm:pl-4 sm:pt-52" id="faq">
+  <div class="container pl-4 lg:pt-72 lg:pl-72 pt-52" id="faq">
     <p>// faq</p>
     <h1 class="pb-8 text-4xl font-bold text-secondary">Frequently Asked Questions</h1>
     <div class="accordion">
@@ -235,17 +249,17 @@
       </div>
     </div>
   </div>
-  <section id="contact" class=" lg:pt-72 lg:pl-72 sm:pl-4 sm:pt-52">
+  <section id="contact" class="pl-4  lg:pt-72 lg:pl-72 pt-52">
     <p class="font-inter">// contact me</p>
     <h1 class="text-4xl font-bold">Contact Me</h1>
       <p class="pt-4">You can reach out to me via Discord or email for inquiries or collaboration. I look forward to discussing your project and exploring how we can work together.</p>
       <div class="flex pt-8 text-4xl">
       <i class='bx bxl-discord-alt'></i>
-      <p class="pl-8 text-3xl sm:text-2xl">aeyika</p>
+      <p class="pl-8 text-2xl lg:text-3xl">aeyika</p>
     </div>
     <div class="flex pt-8 text-4xl">
       <i class='bx bxs-envelope' ></i>
-      <p class="pl-8 text-3xl sm:text-2xl">davidjunbowan@gmail.com</p>
+      <p class="pl-8 text-2xl lg:text-3xl">davidjunbowan@gmail.com</p>
     </div>
   </section>
   <footer class="py-4 bg-primary text-secondary pt-72">
@@ -289,6 +303,10 @@ function toggleAccordion() {
 }
 
 items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+document.getElementById('hamburger').addEventListener('click', function () {
+        const dropdown = document.getElementById('dropdown');
+        dropdown.classList.toggle('hidden'); 
   </script>
 </body>
 </html>
