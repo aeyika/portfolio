@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FCFCFD',
+            secondary: '#26262D',
+            tertiary: '#F25665',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    @layer components{
+      .accordion-header{
+        @apply py-4 px-6 cursor-pointer
+      }
+    }
+    #nav {
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      scroll-behavior: smooth; 
+    }
+
+    .container {
+  width: 48rem;
+}
+
+.accordion {
+  .accordion-item {
+    border-bottom: 1px solid #26262D;
+    button[aria-expanded='true'] {
+      border-bottom: 1px solid #26262D;
+    }
+  }
+  button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: #26262D;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+    &:hover, &:focus {
+      cursor: pointer;
+      color: #26262D;
+      &::after {
+        cursor: pointer;
+        color: #26262D;
+        border: 1px solid #26262D;
+      }
+    }
+    .accordion-title {
+      padding: 1em 1.5em 1em 0;
+    }
+    .icon {
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 22px;
+      height: 22px;
+      border: 1px solid;
+      border-radius: 22px;
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 9px;
+        left: 5px;
+        width: 10px;
+        height: 2px;
+        background: currentColor;
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 5px;
+        left: 9px;
+        width: 2px;
+        height: 10px;
+        background: currentColor;
+      }
+    }
+  }
+  button[aria-expanded='true'] {
+    color: #26262D;
+    .icon {
+      &::after {
+        width: 0;
+      }
+    }
+    + .accordion-content {
+      opacity: 1;
+      max-height: 9em;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
+    }
+  }
+  .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 2em 0;
+    }
+  }
+  </style>
+</head>
+<body class="bg-primary p-4">
+    <nav>
+        <div class="max-w- mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Left-aligned-->
+                <div class="flex items-center">
+                    <a href="#home" class="text-secondary font-bold hover:underline" style="font-size: 2rem;">aeyika</a>
+                </div>
+                <!-- Right-aligned-->
+                <div id="navbar" class="flex items-center space-x-4">
+                    <a href="#about" class="text-secondary text-lg hover:text-gray-800 hover:underline">ABOUT</a>
+                    <a href="#process" class="text-secondary text-lg hover:text-gray-800 hover:underline">PROCESS</a>
+                    <a href="#faq" class="text-secondary text-lg hover:text-gray-800 hover:underline">FAQ</a>
+                    <a href="#contact" class="text-secondary text-lg hover:text-gray-800 hover:underline">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="p-72 text-secondary flex flex-col" id="home">
+        <h1 class="text-4xl font-bold">Hey, I'm aeyika!</h1> 
+        <p class="pt-4">I am a full-stack web developer, passionate on transforming creative ideas
+            into visually stunning and user-friendly digital experiences. </p>
+        <p class="pt-8">With an eye for design and a mastery of <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" class="text-tertiary hover:underline">HTML</a>, 
+            <a href="https://tailwindcss.com/" target="_blank" class="text-tertiary hover:underline">Tailwind CSS</a>, and <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" class="text-tertiary hover:underline">JavaScript</a>,
+            I craft responsive layouts that engage users and enhance functionality.
+          </p>
+          <p class="pt-8">  
+            My enthusiasm drives me to stay updated on the latest trends and technologies,
+            ensuring that every project reflects current best practices.
+          </p>
+          <p class="pt-8">I believe that the intersection of aesthetics and usability is key to creating websites that
+            not only look great but also provide seamless interactions for users.
+        </p>
+    </section>
+    <section class="pt-72 pl-72 text-secondary" id="about">
+      <p class="font-inter">// about me</p>
+      <h1 class="text-secondary text-4xl font-bold">About Me</h1>
+      <p class="pt-4">I am a passionate coder with a love for full-stack development.</p>
+      <p class="pt-8">I enjoy the process of building web applications that blend aesthetics with seamless functionality.</p>
+      <p class="pt-8">I am skilled in: <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" class="text-tertiary hover:underline">HTML</a>, <a href="https://tailwindcss.com/" target="_blank" class="text-tertiary hover:underline">Tailwind CSS</a>,<a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" class="text-tertiary hover:underline"> JavaScript</a>, and <a href="https://www.figma.com/design/" target="_blank" class="text-tertiary hover:underline">Figma</a>.</p>
+    </section>
+    <section class="pt-72 pl-72 flex flex-col text-secondary" id="process">
+      <p class="font-inter">// process</p>
+      <h1 class="bg-primary text-4xl font-bold mb-7">Process</h1>
+  
+      <div class="p-4">
+          <ol class="relative border-l border-secondary">
+              <li class="mb-10 ml-4">
+                  <div class="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                  <time class="mb-1 font-normal leading-none text-secondary text-xl"><i class='bx bxl-figma'></i> Figma</time>
+                  <p class="mb-4 text-base font-normal text-secondary pt-4">Our Figma designs are meticulously crafted, blending creativity and precision to deliver visually stunning and user-friendly interfaces that elevate the user experience.</p>
+              </li>
+              <li class="mb-10 ml-4">
+                  <div class="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                  <time class="mb-1 font-normal leading-none text-xl text-secondary"><i class='bx bxl-visual-studio' ></i> Visual Studio Code</time>
+                  <p class="text-base font-normal text-secondary pt-4">We're highly skilled in Visual Studio Code, HTML, Tailwind CSS, and JavaScript, using these tools to build responsive, efficient, and visually engaging web applications. Our expertise enables us to streamline workflows, write clean, optimized code, and bring innovative designs to life with seamless functionality.</p>
+              </li>
+              <li class="ml-4">
+                  <div class="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                  <time class="mb-1 text-xl font-normal leading-none text-secondary"><i class='bx bxs-up-arrow' ></i> Hosting</time>
+                  <p class="text-base font-normal text-secondary">We host our projects on Vercel, leveraging its seamless deployment and automatic scaling for optimal performance. With easy Git integration and a global CDN, we ensure our applications are fast, reliable, and ready for users worldwide, allowing us to focus on creating exceptional user experiences.</p>
+              </li>
+          </ol>
+      </div>
+  </section>
+  <div class="container pt-72 pl-72" id="faq">
+    <p>// faq</p>
+    <h1 class="text-4xl font-bold text-secondary pb-8">Frequently Asked Questions</h1>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Do you offer mobile support for your websites?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>Yes, all our websites are designed to be mobile-responsive, ensuring they look and function well on various devices. We prioritize a seamless user experience across smartphones and tablets.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">How long does a project take to complete?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>The timeline for a project varies based on its complexity and requirements, but typically ranges from a few days to a few weeks. I will provide a detailed timeline after discussing your specific needs and goals.</p>
+        </div>
+      </div>
+      <div class="accordion-item" >
+        <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Do you provide ongoing support after the project is completed?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>Yes, I offer ongoing maintenance and support packages to ensure your website runs smoothly and stays up-to-date with the latest technologies.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Can you work with existing websites?
+        </span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>Yes, I can enhance and upgrade existing websites by improving their design, functionality, and performance to better meet your goals.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">What payment methods do you accept?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>I primarily accept payments via PayPal and cryptocurrencies, as I prefer the flexibility and security they offer. However, I am open to discussing other payment options to accommodate your preferences.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="contact" class=" pt-72 pl-72 pb-72 ">
+    <p class="font-inter">// contact me</p>
+    <h1 class="text-4xl font-bold">Contact Me</h1>
+      <p class="pt-4">You can reach out to me via Discord or email for inquiries or collaboration. I look forward to discussing your project and exploring how we can work together.</p>
+      <div class="text-4xl pt-8 flex">
+      <i class='bx bxl-discord-alt'></i>
+      <p class="pl-8 text-3xl">aeyika</p>
+    </div>
+    <div class="text-4xl pt-8 flex">
+      <i class='bx bxs-envelope' ></i>
+      <p class="pl-8 text-3xl">davidjunbowan@gmail.com</p>
+    </div>
+  </section>
+  <footer class="bg-primary text-secondary py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
+        <p class="transition duration-300 ease-in-out border-b border-transparent hover:border-secondary cursor-pointer">
+            Created by aeyika
+        </p>
+        <a href="#home" class="text-secondary hover:underline">Back to top</a>
+    </div>
+</footer>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+  
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+  
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+  </script>
+</body>
+</html>
